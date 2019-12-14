@@ -73,7 +73,6 @@ export class InputUserDataFormComponent implements OnInit {
         console.log(err);
         this.toastr.error('Server Error', 'Toastr fun!',
         {timeOut: 2000});
-       // check error status code is 500, if so, do some action
       });
   }
 }
