@@ -8,6 +8,10 @@ import { InputUserDataFormComponent } from './input-user-data-form/input-user-da
 import { DisplayUserDataComponent } from './display-user-data/display-user-data.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { AgGridModule } from 'ag-grid-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 const routes: Routes = [
@@ -16,7 +20,7 @@ const routes: Routes = [
     component: InputUserDataFormComponent
   },
   {
-    path: 'user/:uid',
+    path: 'user_data',
     component: DisplayUserDataComponent
   }
 ];
@@ -28,12 +32,15 @@ const routes: Routes = [
     DisplayUserDataComponent
   ],
   imports: [
+    AgGridModule.withComponents(null),
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
