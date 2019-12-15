@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Display data
+
+To display data in datatbale am using ag-grid-angular
+
+## Project flow
+
+First onload of porject one form will come and after that enter the data into input fields and when you click on register button, it will hit api and do post call after that getting success response it will redirect to user_data module and show all user list in datatables 
